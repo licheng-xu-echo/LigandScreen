@@ -1,5 +1,6 @@
 from rdkit import Chem
 from rdkit.Chem import AllChem
+import numpy as np
 from .utils import clear_ferr_chirality,clear_ada_chirality
 
 def link_lig_to_metal(lig_mol,metal_type,coord_at_idx_lst):
@@ -215,3 +216,35 @@ def build_metal_sub_lig_comp_mol(r_1_smi,r_2_smi,metal,lig_smi):
             cat_mol = link_lig_to_metal(lig_mol,metal,coord_atm_idx)
             cat_mol = gen_metal_sub_lig_complex(cat_mol,r_1_smi,r_2_smi)
     return cat_mol
+
+def xyz2coords(filename):
+    """
+    Reads an .xyz file and returns an array of atomic coordinates.
+    
+    Parameters:
+    filename (str): The path to the .xyz file.
+
+    Returns:
+    coords (np.array): Numpy array of atomic coordinates.
+    """
+    coords = []
+    with open(filename, 'r') as file:
+        lines = file.readlines()[2:]  # Skip the first two lines
+        for line in lines:
+            parts = line.split()
+            coords.append([float(parts[1]), float(parts[2]), float(parts[3])])
+    return np.array(coords)
+
+def find_closest_to_center(coords):
+    """
+    Find the index of the atom closest to the geometric center.
+
+    Parameters:
+    coords (np.array): Numpy array of atomic coordinates.
+
+    Returns:
+    int: Index of the closest atom.
+    """
+    center = np.mean(coords, axis=0)
+    distances = np.linalg.norm(coords - center, axis=1)
+    return np.argmin(distances)
