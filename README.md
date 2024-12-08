@@ -1,2 +1,3 @@
 # LigandScreen
-This is repository "Data-Driven Phosphine Ligand Design of Ni-Catalyzed Enantioselective Suzuki–Miyaura Cross-Coupling Reaction for the Synthesis of Biaryl Atropisomers: standing on the shoulder of Pd catalysis giants"
+
+This is repository "*Proximity Learning-Enabled Ligand Prediction for Ni-Catalyzed Atroposelective Suzuki-Miyaura Cross-Coupling: Leveraging Pd Catalysis Knowledge for Ni Discovery*"
