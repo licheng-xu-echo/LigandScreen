@@ -4,11 +4,21 @@ from sklearn.model_selection import LeaveOneOut
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics import r2_score,mean_absolute_error
 from scipy.stats import pearsonr
+
+def tanimoto_distance(x, y):
+
+    dot_product = np.dot(x, y)
+    x_norm = np.dot(x, x)
+    y_norm = np.dot(y, y)
+    similarity = dot_product / (x_norm + y_norm - dot_product)
+    return 1 - similarity if (x_norm + y_norm - dot_product) != 0 else 1.0
+
 def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='euclidean',topk=20,tgt_simi_desc=None,base_simi_desc=None,ret_metrics=False):
     cv = LeaveOneOut()
     base_model = deepcopy(model)
     delta_model = deepcopy(model)
-    
+    if dist_type == 'tanimoto':
+        dist_type = tanimoto_distance
     all_test_p = []
     all_test_y = []
     if not simi:
