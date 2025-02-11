@@ -1,0 +1,21 @@
+rct_1_smi,rct_2_smi,sol_smi,base_smi,metal,lig_smi,temperature,coord_atoms,ee,yield,ddG
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,COc1ccc([C@@H](c2cc(OC)c(OC)cc2P(c2ccccc2)c2ccccc2)N(C)[S@](=O)C(C)(C)C)cc1,25.0,P S,0.19,0.07,0.2281191620580578
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@H](CP(c1ccccc1)c1ccccc1)c1ccccc1-c1c2ccccc2cc2ccccc12)[S@](=O)C(C)(C)C,25.0,P S,0.47,0.09,0.60496272379928
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccc2ccccc2c1)c1ccccc1P(c1ccccc1)c1ccccc1)[S@](=O)C(C)(C)C,25.0,P S,0.33,0.09,0.4066072847198745
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,C[C@@H](c1ccccc1P(c1ccccc1)c1ccccc1)N(C)[S@](=O)C(C)(C)C,25.0,P S,0.55,0.0,0.733423641708837
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,Cc1cc(C)cc([C@@H](c2ccccc2P(c2ccccc2)c2ccccc2)N(C)[S@](=O)C(C)(C)C)c1,25.0,P S,0.19,0.06,0.2281191620580578
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,Cc1ccccc1[C@@H](c1ccccc1P(c1ccccc1)c1ccccc1)N(C)[S@](=O)C(C)(C)C,25.0,P S,0.13,0.05,0.1550624102309661
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccc(C(C)(C)C)cc1)c1ccccc1P(c1ccccc1)c1ccccc1)[S@](=O)C(C)(C)C,25.0,P S,0.22,0.07,0.2652646099880384
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccc2c(c1)C(C)(C)CCC2(C)C)c1ccccc1P(c1ccccc1)c1ccccc1)[S@](=O)C(C)(C)C,25.0,P S,0.36,0.06,0.4470009427684201
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccccc1)c1ccccc1P(c1ccccc1)c1ccccc1)[S@](=O)C(C)(C)C,25.0,P S,0.2,0.06,0.2404484819048044
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,C[C@@H](c1ccccc1P(C1CCCCC1)C1CCCCC1)N(C)[S@](=O)C(C)(C)C,25.0,P S,0.24,0.05,0.2903113615528974
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccc2ccccc2c1)c1ccccc1P(C1CCCCC1)C1CCCCC1)[S@](=O)C(C)(C)C,25.0,P S,0.11,0.05,0.1309942221993227
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccc2ccccc2c1)c1cccc(OCc2ccccc2)c1P(C1CCCCC1)C1CCCCC1)[S@](=O)C(C)(C)C,25.0,P S,0.01,0.03,0.0118607738385709
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1cc(C(C)(C)C)cc(C(C)(C)C)c1)c1ccccc1P(C1CCCCC1)C1CCCCC1)[S@](=O)C(C)(C)C,25.0,P S,0.05,0.03,0.0593513848481117
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccccc1)c1ccccc1P(C1CCCCC1)C1CCCCC1)[S@](=O)C(C)(C)C,25.0,P S,0.06,0.03,0.0712478504666179
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@H](c1ccccc1P(C1CCCCC1)C1CCCCC1)c1cccc2ccccc12)[S@](=O)C(C)(C)C,25.0,P S,0.08,0.03,0.0950862257298973
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccccc1)c1cccc(OCc2ccccc2)c1P(C1CCCCC1)C1CCCCC1)[S@](=O)C(C)(C)C,25.0,P S,0.09,0.03,0.1070330222592367
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,COc1c(C(C)(C)C)cc([C@@H](c2ccccc2P(C2CCCCC2)C2CCCCC2)N(C)[S@](=O)C(C)(C)C)cc1C(C)(C)C,25.0,P S,0.24,0.03,0.2903113615528974
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@H](c1ccc(C(C)(C)C)cc1)c1ccccc1P(C1CCCCC1)C1CCCCC1)[S@](=O)C(C)(C)C,25.0,P S,-0.18,0.09,0.2158383561592256
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@@H](c1ccccc1)c1ccccc1P([C@]12C[C@@H]3C[C@@H](C[C@@H](C3)C1)C2)[C@]12C[C@@H]3C[C@@H](C[C@@H](C3)C1)C2)[S@](=O)C(C)(C)C,25.0,P S,0.01,0.0,0.0118607738385709
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,CN([C@H](CP(c1ccccc1)c1ccccc1)c1ccccc1)[S@](=O)C(C)(C)C,25.0,P S,0.66,0.94,0.9403069729283244

@@ -1,0 +1,2 @@
+rct_1_smi,rct_2_smi,sol_smi,base_smi,metal,lig_smi,temperature,coord_atoms,ee,yield,ddG
+Cc1ccc2ccccc2c1OS(=O)(=O)C(F)(F)F,OB(O)c1cccc2ccccc12,CN(C)C=O,O=P([O-])([O-])[O-].[K+].[K+].[K+],Ni,Cc1cc(C)cc([C@@H](c2ccccc2P(c2ccccc2)c2ccccc2)N(C)[S@](=O)C(C)(C)C)c1,25.0,P S,0.19,0.06,0.2281191620580578
