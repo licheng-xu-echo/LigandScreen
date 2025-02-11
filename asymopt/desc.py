@@ -44,19 +44,28 @@ def process_desc(array,return_idx=False):
     else:
         return array,rig_idx
 
-def getmorganfp(mol,radius=2,nBits=2048,useChirality=True):
+def getmorganfp(mol,radius=2,nBits=2048,useChirality=True,fp_type="morgan"):
     '''
     
     Parameters
     ----------
     mol : mol
         RDKit mol object.
+    fp_type : str
+        Fingerprint type (morgan, topological, atompair). Default is morgan.
     Returns
     -------
     mf_desc_map : ndarray
         ndarray of molecular fingerprint descriptors.
     '''
-    fp = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol,radius=radius,nBits=nBits,useChirality=useChirality)
+    if fp_type == "morgan":
+        fp = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol,radius=radius,nBits=nBits,useChirality=useChirality)
+    elif fp_type == "topological":
+        fp = rdMolDescriptors.GetHashedTopologicalTorsionFingerprintAsBitVect(mol,nBits=nBits)
+    elif fp_type == "atompair":
+        fp = rdMolDescriptors.GetHashedAtomPairFingerprintAsBitVect(mol,nBits=nBits)
+    else:
+        raise ValueError("Please choose a valid fingerprint type: morgan, topological, atompair")
     return np.array(list(map(eval,list(fp.ToBitString()))))
 
 def getPhysChemDesc(mol):
