@@ -13,7 +13,7 @@ def tanimoto_distance(x, y):
     similarity = dot_product / (x_norm + y_norm - dot_product)
     return 1 - similarity if (x_norm + y_norm - dot_product) != 0 else 1.0
 
-def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='euclidean',topk=20,tgt_simi_desc=None,base_simi_desc=None,ret_metrics=False,ret_train_test=False):
+def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='euclidean',topk=20,tgt_simi_desc=None,base_simi_desc=None,ret_metrics=False,ret_train_test=False,ret_val=False):
     cv = LeaveOneOut()
     base_model = deepcopy(model)
     delta_model = deepcopy(model)
@@ -22,6 +22,8 @@ def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='eucli
     all_test_p = []
     all_test_y = []
     train_test_data_index = []
+    all_base_pred = []
+    all_delta_pred = []
     if not simi:
         base_model.fit(base_x,base_y)
         for train_idx,test_idx in cv.split(tgt_x):
@@ -32,6 +34,8 @@ def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='eucli
             delta_model.fit(train_x,train_d)
             all_test_p.append(base_model.predict(test_x)+delta_model.predict(test_x))
             all_test_y.append(test_y)
+            all_base_pred.append(base_model.predict(test_x))
+            all_delta_pred.append(delta_model.predict(test_x))
             train_test_data_index.append([train_idx,test_idx])
     else:
         
@@ -61,7 +65,8 @@ def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='eucli
             delta_model.fit(train_x,train_d)
             all_test_p.append(base_model.predict(test_x)+delta_model.predict(test_x))
             all_test_y.append(test_y)
-            
+            all_base_pred.append(base_model.predict(test_x))
+            all_delta_pred.append(delta_model.predict(test_x))
             train_test_data_index.append([train_idx,test_idx,simi_data_idx])
     all_test_p = np.concatenate(all_test_p,axis=0)
     all_test_y = np.concatenate(all_test_y,axis=0)
@@ -72,13 +77,19 @@ def model_delta_pred(tgt_x,tgt_y,base_x,base_y,model,simi=False,dist_type='eucli
         if not ret_train_test:
             return all_test_y,all_test_p,r2,mae,prsr
         else:
-            return all_test_y,all_test_p,r2,mae,prsr,train_test_data_index
+            if not ret_val:
+                return all_test_y,all_test_p,r2,mae,prsr,train_test_data_index
+            else:
+                return all_test_y,all_test_p,r2,mae,prsr,train_test_data_index,all_base_pred,all_delta_pred
     else:
         if not ret_train_test:
 
             return all_test_y,all_test_p
         else:
-            return all_test_y,all_test_p,train_test_data_index
+            if not ret_val:
+                return all_test_y,all_test_p,train_test_data_index
+            else:
+                return all_test_y,all_test_p,train_test_data_index,all_base_pred,all_delta_pred
     
 def model_delta_pred_virt(model,base_x,base_y,delta_x,delta_y,tgt_x,
                           dist_type='cosine',topk=20,tgt_simi_desc=None,base_simi_desc=None):
